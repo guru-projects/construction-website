@@ -170,18 +170,18 @@
             </div>
         </div>
         <hr>
-        <div class="commentInputText">
-            <%users.forEach(function(user){%>
+        
+        <%users.forEach(function(user){%>
+            <div class="commentInputText">
                 <img src="blog/comment.png" alt="" width="100px" height="100px">
                 
-                   <div>
+                   <div class="commentInputContent">
                         <h2><%=user.name%></h2>
                         <p><%=user.content%> </p>
                    </div>
-                
-                <% }) %>
-        </div>
-        <hr>
+                </div>
+                   <hr>
+                   <% }) %>
         </div>
 
     <div class="commentInput">
