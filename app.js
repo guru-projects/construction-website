@@ -18,7 +18,7 @@ app.use(express.static("public"));
 // mongodb+srv://guru:FfotG2CSTqJ2lJvd@cluster0.evtv81e.mongodb.net/
 // mongodb://127.0.0.1:27017/constructionDB
 mongoose.set("strictQuery", false);
-mongoose.connect("mongodb+srv://guru:FfotG2CSTqJ2lJvd@cluster0.evtv81e.mongodb.net/"); 
+mongoose.connect("mongodb://127.0.0.1:27017/constructionDB"); 
 console.log(" Connected to MONGODB... ");
  
 const userSchema = new mongoose.Schema({
@@ -66,7 +66,7 @@ app.get("/1", function(req, res) {
 });
 app.get("/2", function(req, res) {
     User2.find().then(users => {
-        res.render("blogPages/1", {
+        res.render("blogPages/2", {
             users: users
             });
     })

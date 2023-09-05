@@ -143,6 +143,60 @@
         </div>
     </aside>
 </section>
-<section class="demo"></section>
+
+<section class="comment">
+    <div class="commentSection">
+        <div class="commentText">
+             <img src="blog/comment.png" alt=""  width="100px" height="100px">
+            <div>
+                <h2>Name</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, similique!</p>
+            </div>
+        </div>
+        <hr>
+        <div class="commentText">
+            <img src="blog/comment.png" alt="" width="100px" height="100px">
+           <div>
+                <h2>Name</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, similique!</p>
+           </div>
+        </div>
+        <hr>
+        <div class="commentText">
+            <img src="blog/comment.png" alt="" width="100px" height="100px">
+            <div>
+                <h2>Name</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, similique!</p>
+            </div>
+        </div>
+        <hr>
+        
+        <%users.forEach(function(user){%>
+            <div class="commentInputText">
+                <img src="blog/comment.png" alt="" width="100px" height="100px">
+                
+                   <div class="commentInputContent">
+                        <h2><%=user.name%></h2>
+                        <p><%=user.content%> </p>
+                   </div>
+                </div>
+                   <hr>
+                   <% }) %>
+        </div>
+
+    <div class="commentInput">
+        <h2>Post Your Comment</h2>
+        <form action="/2" method="post">
+            <div class="formGroup">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="eg.John">
+                <textarea name="content"  cols="30" rows="10" placeholder="Your Comment"></textarea>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+
+    </div>
+
+</section>
 
 <%- include("../partials/footer"); -%>
