@@ -22,7 +22,6 @@
     .blogSection{
         width: 100%;
     }
- 
 }
 @media(max-width:550px){
     .blogAndAside{
@@ -53,6 +52,7 @@
     max-height: 500px;
 }
 .blogContent{
+    /* margin: 20px; */
     margin: 20px 20px 40px 20px;
 }
 .blogContent .info{

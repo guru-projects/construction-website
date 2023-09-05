@@ -2,7 +2,7 @@
 
 .blogAndAside{
     height:auto;
-    margin: 50px 100px 50px 100px;
+    margin: 50px 100px 150px 100px;
     display: flex;
 }
 .asideSection{
@@ -18,15 +18,19 @@
     }
     .asideSection{
         width: 100%;
+        margin-bottom: 200px;
     }
     .blogSection{
         width: 100%;
     }
- 
+    
 }
 @media(max-width:550px){
     .blogAndAside{
         margin: 50px 0 0 0;
+    }
+    .asideSection{
+        margin-bottom: 200px;
     }
 }
 @media(max-width:1230px){
@@ -89,29 +93,12 @@
     font-size: 12px;
     color: #4e4e4e;
 }
-.categories{
-    margin: 30px 0 20px 10px;
-}
-.categories .catHeading{
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-}
-.categories .catList li{
-    list-style: none;
-    margin: 10px;
-}
-.categories .catList li a{
-   
-   
-    font-family: 'Libre Baskerville', serif;
-    font-weight: lighter;
-}
+
 /* view more */
 a {
     text-decoration: none;
     color: inherit;
   }
-  
   .cta {
     position: relative;
     padding: 19px 22px;
@@ -161,19 +148,19 @@ a {
     transform: scale(0.96);
   }
   /* view more end */
-/* links */
-.blogLinks{
-    margin-top: -100px;
-    margin-bottom: 100px;
-    height: 400px;
-    display: grid;
-    place-items: center;
+  .categories{
+    margin: 30px 0 20px 10px;
 }
-.blogLinks .links a{
-    color: #111;
-    font-family:   serif;
+.categories .catHeading{
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+.categories .catList li{
+    list-style: none;
+    margin: 10px;
+}
+.categories .catList li a{
+    color: rgb(0, 47, 255);
+    font-family: 'Libre Baskerville', serif;
     font-weight: lighter;
-    font-size: 2rem;
-    margin: 20px;
 }
-/* links end */
