@@ -16,7 +16,7 @@ app.use(express.static("public"));
 
 //Connecting to the database using mongoose.
 mongoose.set("strictQuery", false);
-mongoose.connect('http://portquiz.net:27017/constructionDB'); 
+mongoose.connect("mongodb+srv://guru:FfotG2CSTqJ2lJvd@cluster0.evtv81e.mongodb.net/?retryWrites=true&w=majority"); 
 console.log(" Connected to constructionDB... ");
  
 const userSchema = new mongoose.Schema({
