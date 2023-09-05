@@ -15,10 +15,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
 //Connecting to the database using mongoose.
-// mongodb+srv://guru:FfotG2CSTqJ2lJvd @cluster0.evtv81e.mongodb.net/
+// mongodb+srv://guru:FfotG2CSTqJ2lJvd@cluster0.evtv81e.mongodb.net/
 // mongodb://127.0.0.1:27017/constructionDB
 mongoose.set("strictQuery", false);
-mongoose.connect("mongodb+srv://guru:FfotG2CSTqJ2lJvd @cluster0.evtv81e.mongodb.net/"); 
+mongoose.connect("mongodb+srv://guru:FfotG2CSTqJ2lJvd@cluster0.evtv81e.mongodb.net/"); 
 console.log(" Connected to MONGODB... ");
  
 const userSchema = new mongoose.Schema({
