@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&display=swap');
+
+.blogAndAside{
+    height:auto;
+    margin: 50px 100px 250px 100px;
+    display: flex;
+}
+.asideSection{
+    /* height: au; */
+    width: 30%;
+}
+.blogSection {
+    width: 70%;
+}
+@media(max-width:900px){
+    .blogAndAside{
+        flex-direction: column;
+    }
+    .asideSection{
+        width: 100%;
+    }
+    .blogSection{
+        width: 100%;
+    }
+}
+@media(max-width:550px){
+    .blogAndAside{
+        margin: 50px 0 0 0;
+    }
+}
+@media(max-width:1230px){
+    .blogAndAside{
+        margin: 50px 50px 0 50px;
+    }
+}
+@media(max-width:1016px){
+    .blogAndAside{
+        margin: 50px 20px 0 20px;
+    }
+}
+.asideSection .popular img{
+    width: 100px;
+    height: 100px;
+}
+.blogSection .blogContent img{
+    width: 100%;
+    max-height: 500px;
+}
+.blogContent{
+    /* margin: 20px; */
+    margin: 20px 20px 40px 20px;
+}
+.blogContent .info{
+    margin: 10px 0;
+    font-family: 'Libre Baskerville', serif;
+    font-weight: lighter;
+    font-size: 14px;
+}
+.blogContent h1{
+    margin-bottom: 20px;
+}
+.blogContent .blogPara{
+    margin-bottom: 30px;
+}
+
+.popular .popularHeading{
+    margin: 10px;
+    font-size: 1.5rem;
+}
+ .popularContent{
+    margin: 20px 0 0 10px;
+    display: flex;
+}
+.popularContent .popularText{
+    margin-left: 10px;
+}
+.popularContent img{
+    width: 100px;
+    height: 100px;
+}
+.popularContent .popularInfo{
+    font-family: 'Libre Baskerville', serif;
+    font-weight: lighter;
+    font-size: 12px;
+    color: #4e4e4e;
+}
+.categories{
+    margin: 30px 0 20px 10px;
+}
+.categories .catHeading{
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+.categories .catList li{
+    list-style: none;
+    margin: 10px;
+}
+.categories .catList li a{
+   
+   
+    font-family: 'Libre Baskerville', serif;
+    font-weight: lighter;
+}
+/* view more */
+a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .cta {
+    position: relative;
+    padding: 19px 22px;
+    transition: all 0.2s ease;
+  }
+  .cta:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 28px;
+    background: rgba(255, 171, 157, 0.5);
+    width: 56px;
+    height: 56px;
+    transition: all 0.3s ease;
+  }
+  .cta span {
+    position: relative;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 900;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    vertical-align: middle;
+  }
+  .cta svg {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: #111;
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all 0.3s ease;
+  }
+  .cta:hover:before {
+    width: 100%;
+    background: #ffab9d;
+  }
+  .cta:hover svg {
+    transform: translateX(0);
+  }
+  .cta:active {
+    transform: scale(0.96);
+  }
+  /* view more end */

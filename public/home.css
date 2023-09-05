@@ -1,0 +1,191 @@
+/* Home */
+@import url('https://fonts.googleapis.com/css2?family=Phudu:wght@300;400&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@200&display=swap');
+
+.boldText{
+    font-size: 2.5rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color:#272829;
+}
+.cardHead{
+    color:#272829;
+    font-family: 'Montserrat', cursive;
+}
+main {
+    background-image: url(media/home5.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+main .welcomeNote{
+    font-size: 3rem;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    color:#000;
+    animation: welcome 2s linear;
+}
+@keyframes welcome {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+section .content {
+    background-color: #D8D9DA;
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+.content .about{
+    max-width: 600px;
+}
+.content .team{
+    width: 350px;
+}
+.content .about p{
+    font-family: 'poppins', sans-serif;
+    font-size: 1.5rem;
+    color: #61677A;
+}
+
+section .content .team img{
+    width: 280px;
+    height: 400px;
+    border: 2px solid #000;
+    border-radius: 20px;
+}
+@media(width < 600px){
+    section .content .team img{
+       width: 100%;
+    }
+}
+section .number{
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 30px;
+    background-color: #EDE4FF ;
+    height: 200px;
+}
+
+/*  Cards */
+ 
+.services{
+    margin-top: 50px;
+    display: grid;
+    place-items: center;
+    height: 100px;
+}
+
+section .card{
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+    background: rgba(210,167,180,0.2);
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(210,167,180,0.1);
+    border-radius: 20px;
+    width: 270px;
+    min-height: 300px;
+}
+section .card .cardImg img{
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius: 10px;
+    width: 250px;
+    height: 240px;
+    object-fit: cover;
+}
+section .card .cardBottom{
+    display: flex;
+    flex-direction: column;
+}
+section .card .cardBottom p{
+    font-family: 'Bai Jamjuree', sans-serif;
+    color: #61677A;
+}
+section .card .cardContent{
+    margin-left: 10px;
+}
+section .card .button{
+    text-decoration: none;
+    margin: 15px auto;
+    width: 100px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border-radius: 20px;
+    color: #fff;
+    background-color: #A076F9;
+    padding: 0.5rem 1rem;
+    transition: scale 0.2 ease;
+}
+section .card .button:hover{
+    scale: 1.05;
+}
+section .card .button:active{
+    scale: 0.95;
+}
+.cardSection {
+    background-color: rgba(255, 255, 255, 0);
+    margin: 50px 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 80px;
+}
+
+/* Partners */
+
+section .partners{
+    width: 100%;
+    height: 400px;
+    background-color:  #EDE4FF;
+} 
+section .partners h1{
+    color: #61677A;
+    text-align: center;
+}
+.logos .logos-slide img{
+    object-fit: contain;
+    width: 200px;
+    height: 200px;
+  }
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.logos {
+    overflow: hidden;
+    padding: 20px 0 60px  0;
+    white-space: nowrap;
+    position: relative;
+}
+
+.logos:hover .logos-slide {
+    animation-play-state: paused;
+}
+
+.logos-slide {
+    display: inline-block;
+    animation: 35s slide infinite linear;
+}
+
+.logos-slide img {
+    margin: 0 40px;
+}

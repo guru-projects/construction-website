@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Under construction</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    
+
+    <link rel="stylesheet" href="/styles.css" />
+    
+  
+  </head>
+  <body>
+    <header>
+      <div class="nav">
+        <div class="logo">
+          <a href="../home">LOGO</a>
+        </div>
+        <ul class="links">
+          <li><a class="linkHover" href="../home">Home</a></li>
+          <li><a class="linkHover" href="../house">House construction</a></li>
+          <li><a class="linkHover" href="../swimming">swimming pool construction</a></li>
+          <!-- <div class="dropdown-menu">
+            <li class="linkHover" class="menu-btn"><a href="../interior">INTERIOR</a></li>
+            <div class="menu-content lineUp">
+              <a class="links-hidden box1" href="../home-interior">Home Interior Design</a>
+              <a class="links-hidden box2" href="../office-interio">Office Interior Design</a>
+            </div>
+          </div> -->
+          <div class="dropdown-menu">
+            <button class="menu-btn"><a class="linkHover" href="#">MORE</a></button>
+            <div class="menu-content lineUp">
+              <a class="links-hidden box1" href="../property">Property maintenance</a>
+              <a class="links-hidden box2" href="../blog">blog</a>
+            </div>
+          </div>
+        </ul>
+        <a class="action-btn" href="../contact">Contact Us</a>
+
+        <div class="toggle-btn btn">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+      <div class="dropDown">
+        <li><a href="../home">Home</a></li>
+        <li><a href="../house">House construction</a></li>
+        <li><a href="../swimming">Swimming pool construction</a></li>
+        <li><a href="../interior">interior design</a></li>
+        <!-- <li><a href="../home-interior">Home Interior Design</a></li>
+        <li><a href="../office-interior">Office Interior Design</a></li> -->
+        <li><a href="../property">Property maintenance</a></li>
+        <li><a href="../blog">Blog</a></li>
+        <li><a class="action-btn" href="../contact">Contact Us</a></li>
+      </div>
+    </header>
+
+    <script>
+
+      const toggleBtn = document.querySelector(".toggle-btn");
+
+      const dropDownMenu = document.querySelector(".dropDown");
+
+      const toggleBtnIcon = document.querySelector(".toggle-btn i");
+
+      toggleBtn.onclick = function () {
+        dropDownMenu.classList.toggle("dropDownAnimation");
+
+        dropDownMenu.classList.toggle("open");
+
+        const isOpen = dropDownMenu.classList.contains("open");
+        toggleBtnIcon.classList = isOpen
+          ? "fa-solid fa-xmark"
+          : "fa-solid fa-bars";
+      };
+      let nav = document.querySelector(".nav");
+
+      let scrollY = window.scrollY;
+
+      window.addEventListener("scroll", () => {
+        if (scrollY < window.scrollY) {
+          nav.classList.add("navHidden");
+        } else {
+          nav.classList.remove("navHidden");
+        }
+
+        scrollY = window.scrollY;
+      });
+    </script>
+   
+  </body>
+</html>

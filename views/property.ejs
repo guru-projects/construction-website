@@ -1,0 +1,103 @@
+<%- include("partials/header"); -%>
+
+<link rel="stylesheet" href="/property.css">
+
+<main>
+    <h1>PROPERTY MAINTENANCE</h1>
+</main>
+
+<section class="introduction">
+    <div class="row">
+        
+        <div class="right">
+            <div class="content">
+                <h1>INTRODUCTION</h1>
+            <p class="italic">We are one of the fastest property maintenance companies in South India. We have a team of expert professionals who are skilled in the field of maintaining commercial properties. We provide maintenance services for office, hospital, hotel, warehouse, IT park, residential and commercial buildings. We have worked with many reputed clients and currently managing some of the famous properties like International Tech Park (ITPL) in Bangalore. Our services include building maintenance, water body maintenance, building renovation and interior work. Currently, we provide our services in Bangalore, Chennai and Hyderabad.</p>
+        </div>
+        </div>
+
+        <div class="left">
+            <img src="introduction.jpg" alt="">
+        </div>
+
+    </div>
+</section>
+
+<section class="serviceList">
+    <h1 class="firstHeading">OUR SERVICES</h1>
+    <div class="serviceContent">
+    <h1 class="secondHeading">ANNUAL BUILDING MAINTENANCE SERVICES</h1>
+    <h3 class="italic">Year-round building maintenance for lasting performance and peace of mind.</h3>
+    <ol>
+        <li>We provide day-to-day services like plumbing work, water pipe leakage repair, electrical work, etc are provided to ensure the proper functioning of the building.</li>
+        <li>Work like whitewashing, distempering, painting, tile repair, carpentry, floor polishing etc is carried out periodically to maintain the aesthetics of the building.</li>
+        <li>Buildings are inspected periodically to identify deterioration.</li>
+        <li>Immediate repair work in case deterioration is detected.</li>
+    </ol>
+    </div>
+</section>
+
+<section class="endCards">
+    <div class="row">
+        
+        <div class="right">
+            <div class="content">
+                <h1>PLUMBING</h1>
+                <h3>Custom made kitchens</h3>
+            <p>We offer installation, repair and emergency services for both residential and commercial properties. Whether it’s a small or big issue, we are always available on the emergency basis. You can just call us to reach us out.</p>
+        </div>
+        </div>
+
+        <div class="left">
+            <img src="plumbing.jpg" alt="">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="left">
+            <img src="electrician.jpg" alt="">
+        </div>
+        <div class="right">
+            <div class="content">
+                <h1>ELECTRICAL</h1>
+                <h3>Efficient and safe electrical services for all your needs.</h3>
+            <p>We offer new construction electrical services, electrical improvement and repair services for both residential and commercial properties.</p>
+        </div>  
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="partners">
+        <h1 class="boldText">Our Partners</h1>
+        <div class="logos">
+            <div class="logos-slide">
+              <img src="/partners/ascendas.png" />
+              <img src="/partners/Bosh-W.png" />
+              <img src="/partners/Chaitanya-w.png" />
+              <img src="/partners/HCL-w.png" />
+              <img src="/partners/kempegowda.png" />
+              <img src="/partners/Schneider-W.png" />
+            </div>
+          </div>
+    </div>
+</section>
+
+<div class="contectUs">
+    <h1>CONTACT US FOR FREE CONSULTATION</h1>
+    <div id="container">
+      <button class="learn-more">
+        <span class="circle" aria-hidden="true">
+          <span class="icon arrow"></span>
+        </span>
+        <span class="button-text">Contact Us</span>
+      </button>
+    </div>
+  </div>
+
+<script>
+    var copy = document.querySelector(".logos-slide").cloneNode(true);
+      document.querySelector(".logos").appendChild(copy);
+</script>
+
+<%- include("partials/footer"); -%>

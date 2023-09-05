@@ -1,0 +1,166 @@
+<%- include("partials/header"); -%>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="/contact.css">
+
+<section class="contactUs">
+    <div class="popup">
+        <span class="popuptext" id="myPopup">A Simple Popup!</span>
+      </div>
+    <div class="container">
+      <div class="formContent">
+      <form class="form"  >
+        <div>
+          <label for="username">User Name</label>
+          <i class="fa-solid fa-user"></i>
+          <input
+            type="text"
+            name="username"
+            id="username"
+            placeholder="Joy Shaheb"
+          />
+          <i class="fas fa-exclamation-circle failure-icon"></i>
+          <i class="far fa-check-circle success-icon"></i>
+          <div class="error"></div>
+        </div>
+
+        <div>
+          <label for="email">Email</label>
+          <i class="fa-solid fa-envelope"></i>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="abc@gmail.com"
+          /> <div class="">
+            <i class="fas fa-exclamation-circle failure-icon"></i>
+          </div>
+         
+          <i class="far fa-check-circle success-icon"></i>
+          <div class="error"></div>
+        </div>
+
+        <div>
+            <label for="phone">Phone</label>
+            <i class="fa-solid fa-phone"></i>
+            <input
+              type="tel"
+              name="phone"
+              id="phone"
+              placeholder="99******68"
+            />
+            <i class="fas fa-exclamation-circle failure-icon"></i>
+            <i class="far fa-check-circle success-icon"></i>
+            <div class="error"></div>
+          </div>
+
+          <div>
+            <label for="city">City</label>
+            <i class="fa-solid fa-city"></i>
+            <input
+              type="text"
+              name="city"
+              id="city"
+              placeholder="ex.chennai"
+            />
+            <i class="fas fa-exclamation-circle failure-icon"></i>
+            <i class="far fa-check-circle success-icon"></i>
+            <div class="error"></div>
+          </div>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+      <div class="content">
+        
+        <div class="innerBox">
+          <h1>CHENNAI OFFICE</h1>
+          <p>#10, Uthamar Gandhi Salai, Nungambakkam High Rd, Nungambakkam, Chennai, Tamil Nadu 600034</p>
+            <a href="">Click for map view</a>
+            <p>Vivek P&emsp;&emsp;-Tel: 9600399336</p>
+            <p>Kuppuraj&emsp;-Tel: 9003699336</p>
+        </div>
+        <div class="innerBox">
+            <h1>BANGALORE OFFICE</h1>
+            <p>#49, 3rd floor, Anantesh Mahal Lakkasandra Extension, Wilson Garden Bengaluru, Karnataka 560027</p>
+            <p>email: info@olsconstruction.com</p>
+            <p>Tel: 9159068893</p>
+            <p>Tel: 7708647339</p>
+        </div>
+        <div class="innerBox">
+            <h1>COIMBATORE OFFICE</h1>
+            <p>Shop No-2, 1st Floor Koundam Palayam, Opposite to Fire Station, Coimbatore, Tamil Nadu – 641030</p>
+        </div>
+      </div>
+    </div>
+</section>
+
+<script>
+
+// const name = document.getElementById('username')
+// const email = document.getElementById('email')
+// const phone = document.getElementById('phone')
+// const city = document.getElementById('city')
+// const fail = document.getElementsByClassName('failure-icon')
+// const success = document.getElementsByClassName('success-icon')
+// //     let id = (id) => document.getElementById(id);
+
+// const button = document.getElementById('submit');
+// let classes = (classes) => document.getElementsByClassName(classes);
+// const form = document.querySelector('.form');
+// let error = [];
+
+// let username = id("username"),
+//   email = id("email"),
+//   phone = id("phone"),
+//   city = id("city"),
+
+//   errorMsg = classes("error"),
+//   successIcon = classes("success-icon"),
+//   failureIcon = classes("failure-icon");
+
+// form.addEventListener("submit", (e) => {
+//   e.preventDefault();
+
+//   engine(username, 0, "Username cannot be blank");
+//   engine(email, 1, "Email cannot be blank");
+//   engine(phone, 2, "Phone cannot be blank");
+//   engine(city, 3, "city cannot be blank");
+// });
+
+// let engine = (id, serial, message) => {
+//   if (id.value.trim() === "") {
+//     errorMsg[serial].innerHTML = message;
+//     id.style.border = "2px solid red";
+//     error.push(message);
+//     // icons
+//     failureIcon[serial].style.opacity = "1";
+//     successIcon[serial].style.opacity = "0";
+//   } else {
+//     errorMsg[serial].innerHTML = "";
+//     id.style.border = "2px solid green";
+
+//     // icons
+//     failureIcon[serial].style.opacity = "0";
+//     successIcon[serial].style.opacity = "1";
+//   }
+// };
+// const popup = document.getElementById("myPopup");
+
+// button.onclick = () => {
+//   if(name.value.length === 0){
+//       name.style.border = "2px solid red"
+//   } else {
+//     name.style.border = "2px solid green"
+//   }
+//     // if(error.length == 0){
+//         popup.classList.add("show");
+//   setTimeout(() => {
+//   popup.classList.remove("show");
+//   }, 2000)
+//     // }
+//     // console.log(error.length);
+// }
+
+</script>
+<%- include("partials/footer"); -%>
+

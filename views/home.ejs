@@ -1,0 +1,156 @@
+<%- include("partials/header") -%>
+<link rel="stylesheet" href="/home.css" />
+<main>
+
+    <div>
+        <h1 class="welcomeNote">Welcome</h1>
+    </div>
+
+</main>
+<section>
+
+    <div class="content">      
+
+        <div class="about">
+            <h1 class="boldText">About Us</h1>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia consequuntur quod in eius excepturi consequatur officiis porro facere laborum temporibus, voluptas molestias. Sapiente dolorum velit dolores, voluptates sint delectus et.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores quibusdam dolore unde dignissimos adipisci sequi omnis. Sunt accusantium, quaerat odit libero quo officia minima repellendus nulla animi, vero eum molestias?</p>
+        </div>
+
+        <div class="team">
+            <h1 class="boldText">Our Team</h1>
+            <br>
+            <img src="media/members.jpg" alt="members Image">
+        </div>
+
+    </div>
+
+    <div class="number">
+        <h1>Year Established</h1>
+        <h1>Projects Completed</h1>
+        <h1>Award Won</h1>
+    </div>
+</section>
+
+<div class="services">
+    <h1 class="boldText">Services</h1>
+</div>
+
+<section class="cardSection">
+    <div class="card">
+
+        <div class="cardImg">
+            <img src="media/houseConstruction.jpg" alt="houseConstruction">
+        </div>
+        <div class="cardBottom">
+            <div class="cardContent">
+                <h2 class="cardHead">House Construction</h2>
+                <p>Building home: design, permits, foundation, frame, systems, finishes, inspections, done.</p>
+            </div>
+            <a class="button" href="./house">VIew More</a>
+            <div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="card">
+
+        <div class="cardImg">
+            <img src="media/swimmingPool.jpg" alt="swimmingPool">
+        </div>
+        <div class="cardBottom">
+            <div class="cardContent">
+                <h2 class="cardHead">Swimming Pool Construction</h2>
+                <p>Build gorgeous pool of any shape with in your budget</p>
+            </div>
+            <a class="button" href="./swimming">VIew More</a>
+        </div>
+
+    </div>
+
+    <div class="card">
+
+        <div class="cardImg">
+            <img src="media/solarPanel.jpg" alt="Solar Plant Installation">
+        </div>
+        <div class="cardBottom">
+            <div class="cardContent">
+                <h2 class="cardHead">Solar Plant Installation</h2>
+                <p> We offer wide range of service to all major solar EPC companies</p>
+            </div>
+            <a class="button" href="#">VIew More</a>
+        </div>
+
+    </div>
+
+    <div class="card">
+
+        <div class="cardImg">
+            <img src="media/property.jpg" alt="">
+        </div>
+        <div class="cardBottom">
+            <div class="cardContent">
+                <h2 class="cardHead">Property maintenance</h2>
+                <p class="long-text">Our services includes building maintenance...</p>
+            </div>
+            <a class="button" href="./property">VIew More</a>
+        </div>
+
+    </div>
+
+    <div class="card">
+
+        <div class="cardImg">
+            <img src="media/interior.avif" alt="interior">
+        </div>
+        <div class="cardBottom">
+            <div class="cardContent">
+                <h2 class="cardHead">Interior Design</h2>
+                <p class="long-text">Interior design: aesthetics, layout, furniture, decor, ambiance, functionality, harmony, creativity.</p>
+            </div>
+            <a class="button" href="#">VIew More</a>
+        </div>
+
+    </div>
+
+    <div class="card">
+
+        <div class="cardImg">
+            <img src="media/renovation.jpg" alt="renovation">
+        </div>
+        <div class="cardBottom">
+            <div class="cardContent" class="container">
+                <h2 class="cardHead">Building Renovation</h2>
+                <p class="long-text">Building renovation: restore, update, modernize, enhance, transform, renew, upgrade, improve.</p>
+            </div>
+            <a class="button" href="#">VIew More</a>
+        </div>
+
+    </div>
+
+</section>
+
+<section>
+    <div class="partners">
+        <h1 class="boldText">Our Partners</h1>
+        <div class="logos">
+            <div class="logos-slide">
+              <img src="partners/ascendas.png" />
+              <img src="partners/Bosh-W.png" />
+              <img src="partners/Chaitanya-w.png" />
+              <img src="partners/HCL-w.png" />
+              <img src="partners/kempegowda.png" />
+              <img src="partners/Schneider-W.png" />
+            </div>
+          </div>
+    </div>
+</section>
+
+<script>
+    var copy = document.querySelector(".logos-slide").cloneNode(true);
+      document.querySelector(".logos").appendChild(copy);
+</script>
+
+<%- include("partials/footer") -%>
