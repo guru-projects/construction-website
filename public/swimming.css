@@ -1,3 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+/* textAnimation */
+.textAnimation {
+	text-decoration: none;
+	color: #18272F;
+	/* font-weight: 700; */
+  position: relative;
+  z-index: 2;
+}
+
+.textAnimation::before {
+  content: '';
+  background-color: rgba(255, 0, 0, 0.473);
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  border-radius: 10px;
+  height: 5px;
+  z-index: -1;
+  transition: all .3s ease-in-out;
+}
+
+.textAnimation:hover::before {
+  bottom: 0;
+  height: 100%;
+}
+/* textAnimation end */
 main{
     height: 100vh;
     background-image: url(swimmingPool/swimmingPool2.jpg);
@@ -6,45 +34,46 @@ main{
     background-repeat: no-repeat;
     /* background-attachment: fixed; */
 }
-main {
+ main {
     display: grid;
     place-items: center;
     font-size: 3rem;
 }
-main h1{
+ main h1{
     margin-left: 20%;
     margin-top: 6%;
 }
 @media (width<987px){
-    main {
+     main {
         font-size: 2rem;
     }
 }
 @media (width<651px){
-    main {
+     main {
         font-size: 1.5rem;
     }
 }
 @media (width<501px){
-    main {
+     main {
         font-size: 1.2rem;
     }
 }
 @media (width<392px){
-    main {
+     main {
         font-size: 0.8rem;
     }
 }
 
-
 .choose{
     height: auto;
-    background-color: aqua;
+    background-color: #EDE4FF ;
 }
 .choose .why{
-    text-align: center;
+    /* text-align: center; */
     padding: 50px 0;
-    font-size: 2rem;
+    font-size: clamp(1rem, 5vw, 2rem);
+    display: grid;
+    place-items: center;
 }
 .choose .cards{
     /* margin-bottom: 50px; */
@@ -52,12 +81,15 @@ main h1{
     align-items: center;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    margin-bottom: 50px;
+    gap: 50px;
 }
 .icon {
     width: 100%;
 }
 .choose .cards .card{
-    background-color: aquamarine;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+    background-color: #D8D9DA;
     width: 350px;
     height: 350px;
     display: flex;
@@ -68,24 +100,34 @@ main h1{
     border: 1px solid #1123;
     border-radius: 20px;
 }
+.choose .cards .card:hover{
+  opacity: 0.6;
+  box-shadow: none;
+  transform: all 1s;
+}
 .choose .cards .card .logo{
     align-self: center;
 }
 .choose .cards .card .content{
-    
     text-align: center;
 }
 .choose .cards .card .content h1{
     margin-bottom: 20px;
+}
+.choose .cards .card .content p{
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
 }
 
 .finishedProjects{
     height: auto;
 }
 .finishedProjects .heading{
-  text-align: center;
   margin: 100px 0;
-  font-size: 2rem;
+  font-size: clamp(1rem, 5vw, 2rem);
+  display: grid;
+  place-items: center;
 }
 /* slider */
 .carousel {
@@ -242,8 +284,14 @@ input:checked + .slide-container .nav label { display: block; }
 }
 .completedProjects .heading{
   margin: 100px;
+  font-size: clamp(1rem, 5vw, 2rem);
   display: grid;
   place-items: center;
+}
+@media(width < 600px){
+  .completedProjects .heading{
+    margin: 100px 20px;
+  }
 }
 .cardInside{
   font-family: 'Poppins', sans-serif;
@@ -417,4 +465,12 @@ translate: 0;
   .contectUs {
     margin-top: -300px;
   }
+}
+.card.hidden{
+  opacity: 0;
+  transition: all 0.4s;
+}
+.card.show{
+  opacity: 1;
+  transition: all 0.4s;
 }

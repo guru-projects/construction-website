@@ -3,6 +3,33 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@200&display=swap');
 
+/* textAnimation */
+.textAnimation {
+	text-decoration: none;
+	color: #18272F;
+	/* font-weight: 700; */
+  position: relative;
+  z-index: 2;
+}
+
+.textAnimation::before {
+  content: '';
+  background-color: rgba(255, 0, 0, 0.473);
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  border-radius: 10px;
+  height: 5px;
+  z-index: -1;
+  transition: all .3s ease-in-out;
+}
+
+.textAnimation:hover::before {
+  bottom: 0;
+  height: 100%;
+}
+/* textAnimation end */
 .boldText{
     font-size: 2.5rem;
     font-family: 'Roboto', sans-serif;
@@ -37,7 +64,8 @@ main .welcomeNote{
 }
 
 section .content {
-    background-color: #D8D9DA;
+    background-image: linear-gradient( 181.6deg,  rgba(216,217,218,1) -1.9%, rgba(237,228,255,1) 75.6% );
+    /* background-color: #D8D9DA; */
     padding: 40px;
     display: flex;
     flex-wrap: wrap;
@@ -78,6 +106,91 @@ section .number{
     background-color: #EDE4FF ;
     height: 200px;
 }
+/* number animation */
+    .wrapperHeading{
+        display: grid;
+        place-items: center;
+        height: 200px;
+    }
+    .wrapperHeading h1{
+        font-size: 2.5rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color:#272829;
+    }
+  .wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+    margin-bottom: 100px;
+  }
+  .container {
+    width: 28vmin;
+    height: 28vmin;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1em 0;
+    position: relative;
+    font-size: 16px;
+    border-radius: 0.5em;
+    background-color: #21242b;
+    border-bottom: 10px solid #18f98f;
+  }
+  i {
+    color: #18f98f;
+    font-size: 2.5em;
+    text-align: center;
+  }
+  span.num {
+    color: #ffffff;
+    display: grid;
+    place-items: center;
+    font-weight: 600;
+    font-size: 3em;
+  }
+  span.text {
+    color: #e0e0e0;
+    font-size: 1em;
+    text-align: center;
+    pad: 0.7em 0;
+    font-weight: 400;
+    line-height: 0;
+  }
+  @media screen and (max-width: 1024px) {
+    /* .wrapper {
+      width: 85vw;
+    } */
+    .container {
+      height: 26vmin;
+      width: 26vmin;
+      font-size: 12px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .wrapper {
+      /* width: 90vw; */
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+    .container {
+      width: calc(50% - 40px);
+      height: 30vmin;
+      font-size: 14px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .wrapper {
+        margin: 20px;
+      gap: 15px;
+    }
+    .container {
+      min-width: 200px;
+      height: 30vmin;
+      font-size: 8px;
+    }
+}
+/* number animation end */
 
 /*  Cards */
  
@@ -98,6 +211,11 @@ section .card{
     width: 270px;
     min-height: 300px;
 }
+section .card:hover{
+    opacity: 0.6;
+    box-shadow: none;
+}
+
 section .card .cardImg img{
     margin-top: 10px;
     margin-left: 10px;
@@ -146,14 +264,16 @@ section .card .button:active{
 
 /* Partners */
 
+section .partners .partnersHeading{
+    display: grid;
+    place-items: center;
+}
 section .partners{
-    width: 100%;
     height: 400px;
     background-color:  #EDE4FF;
 } 
 section .partners h1{
     color: #61677A;
-    text-align: center;
 }
 .logos .logos-slide img{
     object-fit: contain;

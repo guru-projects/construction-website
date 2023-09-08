@@ -7,6 +7,17 @@
   box-sizing: border-box;
   /* font-family: "Poppins", sans-serif; */
 }
+.heading {
+  background-color: #efefef;
+  height: 200px;
+  display: grid;
+  place-items: center;
+  margin-bottom: -150px;
+}
+.heading h1{
+  font-size: clamp(1rem, 5vw, 2rem);
+}
+
 .body {
   min-height: 100vh;
   display: flex;
@@ -95,6 +106,7 @@
   overflow: hidden;
   display: flex;
   justify-content: center;
+  background-color: #efefef;
 }
 .aboutSection .card{
   display: flex;
@@ -110,6 +122,8 @@
     padding: 10px 0;
 }
 .aboutSection .card p{
+  font-family: "Poppins", sans-serif;
+  font-weight: lighter;
   padding: 10px 20px 0 0;
 }
 .aboutSection .card a{
@@ -162,6 +176,7 @@
   /* border: 1px solid black; */
   width: 100%;
   height: 900px;
+  background-color: #efefef;
 }
 
 .company .aboutCompany {
@@ -248,17 +263,21 @@ a {
 .awards{
   display: grid;
   place-items: center;
+  background-color: #efefef;
 }
 
 .awards p{
   text-align: center;
   margin: 20px 80px 20px 80px;
+  font-family: "Poppins", sans-serif;
+  font-weight: lighter;
 }
 /* slideShow */
 .slideShow{
   width: 100%;
     display: grid;
     place-items: center;
+    background-color: #efefef;
 }
 .row{
   width: 80%;
@@ -290,6 +309,7 @@ a {
   /* padding-left: 20px; */
 }
 .row .right .content h1{
+  text-transform: uppercase;
   padding: 20px 0;
 }
 
@@ -298,6 +318,8 @@ a {
   top: 20px;
 }
 .row .right .content p{
+  font-family: "Poppins", sans-serif;
+  font-weight: lighter;
   font-size: 16px;
   line-height: 26px;
   padding-bottom: 15px;
@@ -328,6 +350,7 @@ a {
   justify-content: center;
   flex-direction: column;
   gap: 20px;
+  background-color: #efefef;
 }
 .contectUs button {
   position: relative;
@@ -407,4 +430,58 @@ a {
 .contectUs button:hover .button-text {
   color: #fff;
 }
+/* slide  Animation*/
+.slideShow{
+  overflow: hidden;
+}
+.slideShow .row .left .hidden{
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+.slideShow .row .left .show{
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+.slideShow .row .right .hidden{
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(100%);
+  transition: all 1s;
+}
+.slideShow .row .right .show{
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+  
+/* slide  Animation end*/
 
+/* textAnimation */
+.textAnimation {
+	text-decoration: none;
+	color: #18272F;
+	/* font-weight: 700; */
+  position: relative;
+}
+
+.textAnimation::before {
+  content: '';
+  background-color: rgba(255, 0, 0, 0.473);
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 5px;
+  border-radius: 10px;
+  z-index: 1;
+  transition: all .3s ease-in-out;
+}
+
+.textAnimation:hover::before {
+  bottom: 0;
+  height: 100%;
+}
+/* textAnimation end */

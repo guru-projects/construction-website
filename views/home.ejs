@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="/home.css" />
 <main>
 
-    <div>
+    <div loading="lazy">
         <h1 class="welcomeNote">Welcome</h1>
     </div>
 
@@ -12,7 +12,7 @@
     <div class="content">      
 
         <div class="about">
-            <h1 class="boldText">About Us</h1>
+            <h1 class="boldText" >About Us</h1>
             <br>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia consequuntur quod in eius excepturi consequatur officiis porro facere laborum temporibus, voluptas molestias. Sapiente dolorum velit dolores, voluptates sint delectus et.</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores quibusdam dolore unde dignissimos adipisci sequi omnis. Sunt accusantium, quaerat odit libero quo officia minima repellendus nulla animi, vero eum molestias?</p>
@@ -25,16 +25,31 @@
         </div>
 
     </div>
-
-    <div class="number">
-        <h1>Year Established</h1>
-        <h1>Projects Completed</h1>
-        <h1>Award Won</h1>
-    </div>
+    <div class="wrapperHeading"><h1 class="textAnimation">Projects</h1></div>
+    <div class="wrapper">
+        <div class="container">
+            <i class="fa-solid fa-award"></i>
+          <span class="num" data-goal="100">000</span>
+          <span class="text">AWARDS</span>
+        </div>
+  
+        <div class="container">
+            <i class="fa-solid fa-circle-check"></i>
+          <span class="num" data-goal="200">000</span>
+          <span class="text">COMPLETED</span>
+        </div>
+  
+        <div class="container">
+            <i class="fa-solid fa-person-digging"></i>
+          <span class="num" data-goal="50">000</span>
+          <span class="text">ONGOING...</span>
+        </div>
+  
+      </div>
 </section>
 
 <div class="services">
-    <h1 class="boldText">Services</h1>
+    <h1 class="boldText textAnimation">Services</h1>
 </div>
 
 <section class="cardSection">
@@ -134,7 +149,7 @@
 
 <section>
     <div class="partners">
-        <h1 class="boldText">Our Partners</h1>
+        <div class="partnersHeading"><h1 class="boldText textAnimation">Our Partners</h1></div>
         <div class="logos">
             <div class="logos-slide">
               <img src="partners/ascendas.png" />
@@ -151,6 +166,34 @@
 <script>
     var copy = document.querySelector(".logos-slide").cloneNode(true);
       document.querySelector(".logos").appendChild(copy);
+
+      let nums = document.querySelectorAll(".container .num");
+let section = document.querySelector(".wrapper");
+let started = false; // Function Started ? No
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        
+        if(entry.isIntersecting){
+            if (!started) {
+                nums.forEach((num) => startCount(num));
+              }
+              started = true;
+        }
+    });
+});
+nums.forEach((el) => observer.observe(el));
+
+function startCount(el) {
+  let goal = el.dataset.goal;
+  let count = setInterval(() => {
+    el.textContent++;
+    if (el.textContent == goal) {
+      clearInterval(count);
+    }
+  }, 2000 / goal);
+}
+
 </script>
 
 <%- include("partials/footer") -%>

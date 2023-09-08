@@ -26,6 +26,13 @@ const userSchema = new mongoose.Schema({
   content : String
 });
 
+const contactSchema = new mongoose.Schema({
+    name : String,
+    email : String,
+    phone : String,
+    city : String
+  });
+
 app.get("/", function(req, res) {
     res.render("home");
 })
@@ -80,6 +87,25 @@ app.get("/apartment", function(req, res) {
 
 app.get("/furniture", function(req, res) {
     res.render("blogPages/furniture");
+})
+
+const Contact = mongoose.model("Contact", contactSchema);
+
+app.post("/contact", function(req, res) {
+    const contact = new Contact({
+        name : req.body.username,
+        email : req.body.email,
+        phone : req.body.phone,
+        city : req.body.city
+    })
+    contact.save()
+    .then( () => {
+        console.log("contact added to DB..");
+        res.redirect("/contact");
+    })
+    .catch((err) => {
+        res.status(400).send("unable to sent contact" + err)
+    })
 })
 
 app.get("/1", function(req, res) {

@@ -13,10 +13,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    
-
     <link rel="stylesheet" href="/styles.css" />
-    
   
   </head>
   <body>
@@ -46,9 +43,16 @@
         </ul>
         <a class="action-btn" href="../contact">Contact Us</a>
 
-        <div class="toggle-btn btn">
+        <!-- <div class="toggle-btn btn">
           <i class="fa-solid fa-bars"></i>
+        </div> -->
+        <div  class="toggle-btn btn hamburger">
+          <div class="hamburger__container">
+            <div class="hamburger__inner"></div>
+            <div class="hamburger__hidden"></div>
+          </div>
         </div>
+
       </div>
       <div class="dropDown">
         <li><a href="../home">Home</a></li>
@@ -65,35 +69,68 @@
 
     <script>
 
-      const toggleBtn = document.querySelector(".toggle-btn");
-
       const dropDownMenu = document.querySelector(".dropDown");
+
+      const toggleBtn = document.querySelector(".toggle-btn");
 
       const toggleBtnIcon = document.querySelector(".toggle-btn i");
 
-      toggleBtn.onclick = function () {
-        dropDownMenu.classList.toggle("dropDownAnimation");
+      document.querySelector('.hamburger').addEventListener('click', (e) => {
+      e.currentTarget.classList.toggle('is-active');
+      dropDownMenu.classList.toggle("open");
+        
+    })    
+      
+    //     const isOpen = dropDownMenu.classList.contains("open");
 
-        dropDownMenu.classList.toggle("open");
+    //       if(isOpen) {
+    //           document.addEventListener("click", (e) => {
+    //         let clickedElem = e.target;
+    //         do {
+    //           if (clickedElem == dropDownMenu) {
+    //               console.log("inside");
+    //             return;
+    //           }
+    //           clickedElem = clickedElem.parentNode;
+    //         } while (clickedElem);
+    //           console.log("out");
+    // })
+    //   };
+    
 
-        const isOpen = dropDownMenu.classList.contains("open");
-        toggleBtnIcon.classList = isOpen
-          ? "fa-solid fa-xmark"
-          : "fa-solid fa-bars";
-      };
+      // hide nav while scrolling
       let nav = document.querySelector(".nav");
 
       let scrollY = window.scrollY;
 
       window.addEventListener("scroll", () => {
-        if (scrollY < window.scrollY) {
+
+        const navOpen = dropDownMenu.classList.contains("open");
+        
+        if (navOpen){
+          nav.classList.remove("navHidden");
+        }else if (scrollY < window.scrollY) {
           nav.classList.add("navHidden");
+          dropDownMenu.classList.remove("open")
         } else {
           nav.classList.remove("navHidden");
         }
 
         scrollY = window.scrollY;
       });
+      
+      // document.addEventListener("click", (e) => {
+      //   let clickedElem = e.target;
+      //   do {
+      //     if (clickedElem == dropDownMenu) {
+      //         console.log("inside");
+      //       return;
+      //     }
+      //     clickedElem = clickedElem.parentNode;
+      //   } while (clickedElem);
+      //   console.log("outside");
+      // });
+
     </script>
    
   </body>

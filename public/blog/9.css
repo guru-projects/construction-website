@@ -114,7 +114,10 @@
     gap: 20px;
 }
 h2, h3{
-    margin: 10px;
+    margin: 20px 0;
+}
+p{
+    margin-bottom: 20px;
 }
 /* comment */
 .comment{

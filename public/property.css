@@ -1,5 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&display=swap');
+/* textAnimation */
+.textAnimation {
+	text-decoration: none;
+	color: #18272F;
+	/* font-weight: 700; */
+  position: relative;
+  z-index: 2;
+}
 
+.textAnimation::before {
+  content: '';
+  background-color: rgba(255, 0, 0, 0.473);
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  border-radius: 10px;
+  height: 5px;
+  z-index: -1;
+  transition: all .3s ease-in-out;
+}
+
+.textAnimation:hover::before {
+  bottom: 0;
+  height: 100%;
+}
+/* textAnimation end */
 main{
     height: 100vh;
     background-image: url(property/property2.jpg);
@@ -105,8 +131,9 @@ main h1{
     height: auto;   
 }
 .serviceList .firstHeading{
-    text-align: center;
-    font-size: 2rem;
+    display: grid;
+    place-items: center;
+    font-size: clamp(1rem, 5vw, 2rem);
 }
 .serviceList .serviceContent{
     width: 80%;
@@ -204,7 +231,10 @@ main h1{
 
 /* endCards end */
 /* Partners */
-
+section .partners .partnersHeading{
+  display: grid;
+  place-items: center;
+}
 section .partners{
     width: 100%;
     height: 400px;

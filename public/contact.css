@@ -1,48 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 .contactUs{
-    margin-bottom: 100px;
+    margin-bottom: 150px;
     display: flex;
     flex-wrap: wrap;
     margin-top: 50px;
 }
-/* @media(max-width: 900px){
-    .contactUs {
-        margin-top: 50px;
-    }
-} */
+
+.contactUs .text{ 
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+}
+.contactUs .textPara{
+  font-family: 'Open Sans', sans-serif;
+}
 .contactUs .formContent{
     width: 100%;
 }
 .contactUs .container {
     display: flex;
-    /* flex-direction: row; */
   }
-  
-  .contactUs  .image {
-    background-image: url("./images/illustration.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    /* border: 2px solid black; */
-    height: 65%;
-  }
-  
-  .contactUs .text {
-    text-align: center;
-    color: white;
-    font-size: 18px;
-  }
-  
-  /**
-  * ! style rules for form section
-  **/
-  
+
   .contactUs form {
     display: flex;
     flex-direction: column;
     justify-content: center;
     /* width: 45%; */
     /* max-width: 400px; */
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
     padding: 50px;
   }
   
@@ -75,104 +58,32 @@
   .contactUs input:focus {
     border: 2px solid #f2796e;
   }
-  
-  /**
-  * ! style rules for social section
-  **/
-  
-  .contactUs .btn {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 15px;
-  }
-  
-  .contactUs .btn-1,
-  .contactUs .btn-2 {
-    padding: 10px 5px;
-    width: 100%;
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid #c4c4c4;
-    border-radius: 8px;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-  }
-  
-  .contactUs .btn-2 {
-    background-color: #4f70b5;
-    color: white;
-  }
-  
-  .contactUs .or {
-    text-align: center;
-  }
-  
-  .contactUs .question {
-    font-size: 15px;
-  }
-  
-  .contactUs span {
-    color: #f2796e;
-    cursor: pointer;
-  }
-  
-  /**
-  * ! style rules for form icons
-  **/
-  
+
   .contactUs form div i {
     position: absolute;
     padding: 10px;
   }
-  
-  .contactUs .success-icon,
-  .contactUs .failure-icon {
-    right: 0;
-    opacity: 0;
-  }
 
-  .contactUs.failure-icon,
-  .contactUs .error {
-    color: red;
-  }
-  
-  .contactUs .success-icon {
-    color: green;
-  }
-  
-  .contactUs .error {
-    font-size: 14.5px;
-    margin-top: 5px;
-  }
-  
-  /**
-  * ! style rules for button 
-  **/
-  
   .contactUs button {
     margin-top: 15px;
     width: 100%;
     height: 45px;
     background-color: #f2796e;
-    border: 2px solid #f2796e;
+    border: 2px solid #ffffff;
     border-radius: 8px;
     color: #fff;
     font-size: 20px;
     cursor: pointer;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.1);
     transition: all 0.1s ease;
   }
-  
-  .contactUs button:hover {
+  .contactUs button:hover{
+    color: #f2796e;
+    background-color: #fff;
+    border: 2px solid #f2796e;
     opacity: 0.8;
   }
   
-  /**
-  * ! Media Queries are here
-  **/
   
   @media (max-width: 900px) {
     .contactUs .container {
@@ -198,53 +109,13 @@
     }
   }
   
-  /* The actual popup */
-  .popup .popuptext {
-    visibility: hidden;
-    width: 160px;
-    background-color: #555;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 8px 0;
-    margin-left: 50%;
-    position: absolute;
-    z-index: 2;
-    top: 200px;
-    /* left: 100px; */
-    /* margin-left: -80px; */
-  }
-  
-  /* Toggle this class - hide and show the popup */
-  .popup .show {
-    visibility: visible;
-    -webkit-animation: fadeIn 1s;
-    animation: fadeIn 1s;
-  }
-
-  
-  /* Add animation (fade in the popup) */
-  @-webkit-keyframes fadeIn {
-    from {opacity: 0;} 
-    to {opacity: 1;}
-  }
-  
-  @keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity:1 ;}
-  }
-
-  /**
-  * ! style rules for content section
-  **/
-  
   .contactUs .content {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     /* flex-direction: column; */
     /* justify-content: space-around; */
-    background-color: #6eb7f2;
+    /* background-color: #6eb7f2; */
     /* width: 55%; */
     /* min-height: 100vh; */
     padding: 10px 20px;
@@ -253,6 +124,7 @@
   .contactUs .content .innerBox{
     width: auto;
     padding-right: 50%;
+    margin-bottom: 20px;
   }
 @media(max-width:1100px){
   .contactUs .content .innerBox{
