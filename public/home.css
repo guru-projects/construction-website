@@ -2,22 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Phudu:wght@300;400&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@200&display=swap');
-/* Pre-loader CSS */
-.page-loader{
-    width: 100%;
-    height: 100vh;
-    display: grid;
-    place-items: center;
-    /* position: absolute; */
-    background: #ffffff;
-    z-index: 1000;
-   
-}
-.page-loader .loaderImg{
-    width: 100px;
-    height: 100px;
-}
-/* Pre-loader CSS end */
 
 /* textAnimation */
 .textAnimation {
@@ -30,7 +14,7 @@
 
 .textAnimation::before {
   content: '';
-  background-color: rgba(255, 0, 0, 0.473);
+  background-color: #A076F9;
   position: absolute;
   left: 0;
   bottom: -2px;
@@ -63,7 +47,7 @@ main {
     background-repeat: no-repeat;
 }
 main .welcomeNote{
-    font-size: 3rem;
+    font-size: clamp(3rem, 5vw, 5rem);
     display: grid;
     place-items: center;
     height: 100vh;
@@ -73,9 +57,12 @@ main .welcomeNote{
 @keyframes welcome {
     from{
         opacity: 0;
+        backdrop-filter: blur(0%);
     }
     to{
         opacity: 1;
+        backdrop-filter: blur(100%);
+
     }
 }
 
@@ -151,10 +138,11 @@ section .number{
     font-size: 16px;
     border-radius: 0.5em;
     background-color: #21242b;
-    border-bottom: 10px solid #18f98f;
+    border-bottom: 10px solid #A076F9;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 11.3115px 40px 0px;
   }
   i {
-    color: #18f98f;
+    color: #A076F9;
     font-size: 2.5em;
     text-align: center;
   }
@@ -218,6 +206,7 @@ section .number{
 }
 
 section .card{
+    overflow: hidden;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
     background: rgba(210,167,180,0.2);
     -webkit-backdrop-filter: blur(6px);
@@ -226,15 +215,23 @@ section .card{
     border-radius: 20px;
     width: 270px;
     min-height: 300px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
 }
 section .card:hover{
-    opacity: 0.6;
-    box-shadow: none;
+    /* opacity: 0.6; */
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px 0px inset;
 }
-
+section .card:hover .cardImg img{
+    scale: 1.1;
+    transition: all 0.5s;
+}
+section .card .cardImg{
+    overflow: hidden;   
+    border-radius: 10px;
+}
 section .card .cardImg img{
-    margin-top: 10px;
-    margin-left: 10px;
     border-radius: 10px;
     width: 250px;
     height: 240px;
@@ -244,6 +241,7 @@ section .card .cardBottom{
     display: flex;
     flex-direction: column;
 }
+
 section .card .cardBottom p{
     font-family: 'Bai Jamjuree', sans-serif;
     color: #61677A;
@@ -251,9 +249,12 @@ section .card .cardBottom p{
 section .card .cardContent{
     margin-left: 10px;
 }
+
 section .card .button{
-    text-decoration: none;
+    display: grid;
+    place-items: center;
     margin: 15px auto;
+    text-decoration: none;
     width: 100px;
     font-size: 0.8rem;
     font-weight: bold;

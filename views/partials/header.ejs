@@ -62,14 +62,14 @@
         <li><a href="../house">House construction</a></li>
         <li><a href="../swimming">Swimming pool construction</a></li>
         <li><a href="../interior">interior design</a></li>
-        <!-- <li><a href="../home-interior">Home Interior Design</a></li>
-        <li><a href="../office-interior">Office Interior Design</a></li> -->
         <li><a href="../property">Property maintenance</a></li>
         <li><a href="../blog">Blog</a></li>
         <li><a class="action-btn" href="../contact">Contact Us</a></li>
       </div>
     </header>
-    
+
+    <section>
+
     <script>
      document.onreadystatechange = function() {
     if (document.readyState !== "complete") {
@@ -81,35 +81,31 @@
     }
 };
       // navbar
-      const dropDownMenu = document.querySelector(".dropDown");
+      const dropDownMenu = document.querySelector(".dropDown"); 
+
+      const navbar = document.querySelector(".nav");
 
       const toggleBtn = document.querySelector(".toggle-btn");
 
       const toggleBtnIcon = document.querySelector(".toggle-btn i");
 
-      document.querySelector('.hamburger').addEventListener('click', (e) => {
-      e.currentTarget.classList.toggle('is-active');
+      const hamBurger = document.querySelector(".toggle-btn");
+
+      hamBurger.addEventListener('click', () => {
+      hamBurger.classList.toggle("is-active");
       dropDownMenu.classList.toggle("open");
-        
-    })    
+      dropDownMenu.classList.toggle("dropDownAnimation");
+    })
+
+    const body = document.querySelector("section");
+    body.onclick = function(){
       
-    //     const isOpen = dropDownMenu.classList.contains("open");
-
-    //       if(isOpen) {
-    //           document.addEventListener("click", (e) => {
-    //         let clickedElem = e.target;
-    //         do {
-    //           if (clickedElem == dropDownMenu) {
-    //               console.log("inside");
-    //             return;
-    //           }
-    //           clickedElem = clickedElem.parentNode;
-    //         } while (clickedElem);
-    //           console.log("out");
-    // })
-    //   };
-    
-
+      dropDownMenu.classList.remove("open");
+      hamBurger.classList.remove("is-active");
+      dropDownMenu.classList.remove("dropDownAnimation");
+      
+    }
+      
       // hide nav while scrolling
       let nav = document.querySelector(".nav");
 
@@ -123,26 +119,15 @@
           nav.classList.remove("navHidden");
         }else if (scrollY < window.scrollY) {
           nav.classList.add("navHidden");
-          dropDownMenu.classList.remove("open")
         } else {
           nav.classList.remove("navHidden");
         }
-
+        dropDownMenu.classList.remove("open");
+        hamBurger.classList.remove('is-active');
+        dropDownMenu.classList.remove("dropDownAnimation");
         scrollY = window.scrollY;
       });
-      
-      // document.addEventListener("click", (e) => {
-      //   let clickedElem = e.target;
-      //   do {
-      //     if (clickedElem == dropDownMenu) {
-      //         console.log("inside");
-      //       return;
-      //     }
-      //     clickedElem = clickedElem.parentNode;
-      //   } while (clickedElem);
-      //   console.log("outside");
-      // });
-
+  
     </script>
    
   </body>

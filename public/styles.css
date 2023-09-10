@@ -174,6 +174,7 @@ font-weight: 100;
 .dropDown.open{
     height: 300px;
 }
+
 .dropDown li a{
     color: #fff;
     font-family: 'Roboto', sans-serif;
@@ -244,7 +245,7 @@ font-weight: 100;
     font-size: 14px;
  }
  .links-hidden{
-    background-color: #A076F9;
+    background-color: #21242b;
     display: block;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
  }
@@ -331,11 +332,6 @@ font-weight: 100;
   
     animation: dropDownAnimation 1.8s;
   
-  }
-  .dropDownAnimation li:nth-child(8){
-  
-    animation: dropDownAnimation 2s;
-  
   } 
 
     /* Footer */
@@ -354,7 +350,7 @@ footer {
     position: relative;
     width: 100%;
     background: rgb(53,134,255);
-    background: linear-gradient(180deg, rgba(53,134,255,1) 26%, rgba(249,204,255,1) 98%);    
+    background: linear-gradient(180deg, rgba(53,134,255,1) 26%, rgb(71, 161, 235) 98%);    
     display: flex;
     justify-content: center;
     align-items: center;

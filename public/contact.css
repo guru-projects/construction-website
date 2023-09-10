@@ -56,7 +56,7 @@
   }
   
   .contactUs input:focus {
-    border: 2px solid #f2796e;
+    border: 2px solid #A076F9;
   }
 
   .contactUs form div i {
@@ -68,7 +68,7 @@
     margin-top: 15px;
     width: 100%;
     height: 45px;
-    background-color: #f2796e;
+    background-color: #A076F9;
     border: 2px solid #ffffff;
     border-radius: 8px;
     color: #fff;
@@ -78,9 +78,9 @@
     transition: all 0.1s ease;
   }
   .contactUs button:hover{
-    color: #f2796e;
+    color: #A076F9;
     background-color: #fff;
-    border: 2px solid #f2796e;
+    border: 2px solid #A076F9;
     opacity: 0.8;
   }
   
@@ -125,6 +125,9 @@
     width: auto;
     padding-right: 50%;
     margin-bottom: 20px;
+  }
+  .contactUs .content .innerBox h1{
+    margin-bottom: 10px;
   }
 @media(max-width:1100px){
   .contactUs .content .innerBox{
