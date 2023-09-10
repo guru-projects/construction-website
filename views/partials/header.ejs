@@ -17,6 +17,9 @@
   
   </head>
   <body>
+    <div class="page-loader">
+      <div><img class="loaderImg" src="/wall.gif" alt=""></div>
+  </div> 
     <header>
       <div class="nav">
         <div class="logo">
@@ -66,9 +69,18 @@
         <li><a class="action-btn" href="../contact">Contact Us</a></li>
       </div>
     </header>
-
+    
     <script>
-
+     document.onreadystatechange = function() {
+    if (document.readyState !== "complete") {
+        document.querySelector("body").style.visibility = "hidden";
+        document.querySelector(".page-loader").style.visibility = "visible";
+    } else {
+        document.querySelector(".page-loader").style.display = "none";
+        document.querySelector("body").style.visibility = "visible";
+    }
+};
+      // navbar
       const dropDownMenu = document.querySelector(".dropDown");
 
       const toggleBtn = document.querySelector(".toggle-btn");

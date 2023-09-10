@@ -1,5 +1,9 @@
 <%- include("partials/header") -%>
 <link rel="stylesheet" href="/home.css" />
+
+    <!-- <div class="page-loader ">
+        <div><img class="loaderImg" src="wall.gif" alt=""></div>
+    </div>  -->
 <main>
 
     <div loading="lazy">
@@ -164,6 +168,20 @@
 </section>
 
 <script>
+document.onreadystatechange = function() {
+    if (document.readyState !== "complete") {
+        document.querySelector("body").style.visibility = "hidden";
+        document.querySelector(".page-loader").style.visibility = "visible";
+    } else {
+        document.querySelector(".page-loader").style.display = "none";
+        document.querySelector("body").style.visibility = "visible";
+    }
+};
+        //   function hideLoader(){
+        // document.getElementsByClassName('page-loader').fadeOut('slow');
+        // //   $('.page-loader').fadeOut('slow');
+        // }
+
     var copy = document.querySelector(".logos-slide").cloneNode(true);
       document.querySelector(".logos").appendChild(copy);
 
