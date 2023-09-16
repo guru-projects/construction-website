@@ -6,7 +6,8 @@
     #6528F7
     #A076F9
     #D7BBF5
-    #EDE4FF  */
+    #EDE4FF  
+            */
 
     @import url('https://fonts.googleapis.com/css2?family=Bitter:wght@500&family=Fira+Code:wght@300&family=Montserrat:wght@100&family=Raleway:wght@500&display=swap');
 *{
@@ -28,10 +29,8 @@ body{
   height: 100vh;
   display: grid;
   place-items: center;
-  /* position: absolute; */
   background: #ffffff;
   z-index: 1000;
- 
 }
 .page-loader .loaderImg{
   width: 100px;

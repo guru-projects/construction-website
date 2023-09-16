@@ -1,5 +1,7 @@
 <%- include("partials/header"); -%>
 
+<script defer src="/animate.js"></script>
+
 <link rel="stylesheet" href="/property.css">
 
 <main>
@@ -40,24 +42,24 @@
     <div class="row">
         
         <div class="right">
-            <div class="content">
-                <h1>PLUMBING</h1>
+            <div class="content  hidden">
+                <h1 class="">PLUMBING</h1>
                 <h3>Custom made kitchens</h3>
             <p>We offer installation, repair and emergency services for both residential and commercial properties. Whether it’s a small or big issue, we are always available on the emergency basis. You can just call us to reach us out.</p>
         </div>
         </div>
 
         <div class="left">
-            <img src="plumbing.jpg" alt="">
+            <img class="hidden" src="plumbing.jpg" alt="">
         </div>
     </div>
 
     <div class="row">
         <div class="left">
-            <img src="electrician.jpg" alt="">
+            <img class="hidden" src="electrician.jpg" alt="">
         </div>
-        <div class="right">
-            <div class="content">
+        <div class="right" id="right">
+            <div  class="content hidden">
                 <h1>ELECTRICAL</h1>
                 <h3>Efficient and safe electrical services for all your needs.</h3>
             <p>We offer new construction electrical services, electrical improvement and repair services for both residential and commercial properties.</p>

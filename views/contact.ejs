@@ -6,6 +6,8 @@
 <section class="contactUs">
     
     <div class="container">
+      <div class="background1">
+      <div class="background">
       <div class="formContent">
       <form class="form"  action="/contact" method="post">
         <div>
@@ -55,10 +57,11 @@
               required
             />
           </div>
-
         <button type="submit" id="submit" class="text">Submit</button>
       </form>
     </div>
+  </div>
+</div>
       <div class="content">
         
         <div class="innerBox">
@@ -84,14 +87,15 @@
 </section>
 
 <script>
+
   const name = document.getElementById('username')
   const email = document.getElementById('email')
   const phone = document.getElementById('phone')
   const city = document.getElementById('city')
-const button = document.getElementById('submit');
-const form = document.querySelector('form');
-let arr = [name, email, phone, city];
+  const button = document.getElementById('submit');
+  const form = document.querySelector('form');
 
+let arr = [name, email, phone, city];
 
 button.onclick = () => {
   
@@ -104,7 +108,6 @@ button.onclick = () => {
   }
 }
 }
-
 
 </script>
 <%- include("partials/footer"); -%>
