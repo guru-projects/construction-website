@@ -127,6 +127,9 @@
   .contactUs .content .innerBox h1{
     margin-bottom: 10px;
   }
+  .contactUs .content .innerBox p{
+    color: #30303099;
+  }
 @media(max-width:1100px){
   .contactUs .content .innerBox{
     padding-right: 30%;
