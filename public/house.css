@@ -470,6 +470,7 @@ a {
 	color: #18272F;
 	/* font-weight: 700; */
   position: relative;
+  z-index: 2;
 }
 
 .textAnimation::before {
@@ -481,7 +482,7 @@ a {
   width: 100%;
   height: 5px;
   border-radius: 10px;
-  z-index: 1;
+  z-index: -1;
   transition: all .3s ease-in-out;
 }
 
@@ -490,3 +491,15 @@ a {
   height: 100%;
 }
 /* textAnimation end */
+.boldText{
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  color:#61677A;
+}
+.aboutText{
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #353535;
+  font-family: 'poppins', sans-serif;
+}

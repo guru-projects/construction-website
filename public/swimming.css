@@ -475,3 +475,16 @@ translate: 0;
   opacity: 1;
   transition: all 0.4s;
 }
+
+.boldText{
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  color:#61677A;
+}
+.textShade{
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #353535;
+  font-family: 'poppins', sans-serif;
+}
