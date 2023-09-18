@@ -139,20 +139,23 @@ font-weight: 100;
     margin-top: 5px;
     font-size: 0.8rem;
     font-weight: bold;
-    border-radius: 20px;
+    border-radius: 10px;
     color: #fff;
     background-color: #A076F9;
     padding: 0.5rem 1rem;
     border: none;
     outline: none;
-    transition: scale 0.2 ease
+    transition: scale 0.2 ease;
+    transition: border-radius 0.2s;
 }
 .action-btn:hover{
-    scale: 1.05;
+    /* scale: 1.05; */
     color: #fff;
+    border-radius: 20px;
 }
 .action-btn:active{
-    scale: 0.95;
+  border-radius: 20px;
+  scale: 0.95;
 }
 
 .dropDown{
