@@ -122,6 +122,9 @@
     padding: 10px 0;
 }
 .aboutSection .card p{
+  color: #18272F;
+}
+.aboutSection .card p{
   font-family: "Poppins", sans-serif;
   font-weight: lighter;
   padding: 10px 20px 0 0;
@@ -267,6 +270,7 @@ a {
 }
 
 .awards p{
+  color: #30303099;
   text-align: center;
   margin: 20px 80px 20px 80px;
   font-family: "Poppins", sans-serif;
@@ -318,6 +322,7 @@ a {
   top: 20px;
 }
 .row .right .content p{
+  color: #30303099;
   font-family: "Poppins", sans-serif;
   font-weight: lighter;
   font-size: 16px;

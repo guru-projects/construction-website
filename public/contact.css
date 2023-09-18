@@ -28,7 +28,7 @@
   padding: 10px;
   width: 100%;
   max-width: 700px;
-  background-color: #32009e;
+  /* background-color: #32009e; */
   border-radius: 50px;
   background: #e4d6ff;
   box-shadow:  20px 20px 60px #c9c2d9,
@@ -67,7 +67,7 @@
     height: 40px;
     border-radius: 8px;
     outline: none;
-    border: 2px solid #c4c4c4;
+    border: 2px solid #7c7c7c;
     padding: 0 30px;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
   }
