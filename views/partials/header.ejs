@@ -19,9 +19,11 @@
   
   </head>
   <body>
+
     <div class="page-loader">
       <div><img class="loaderImg" src="/wall.gif" alt=""></div>
   </div> 
+
     <header>
       <div class="nav">
         <div class="logo">
@@ -60,16 +62,17 @@
       </div>
     </header>
 
-    <section>
+    <section class="webContent">
 
     <script>
+      // pre-loader
      document.onreadystatechange = function() {
     if (document.readyState !== "complete") {
-        document.querySelector("body").style.visibility = "hidden";
+        document.querySelector("webContent").style.visibility = "none";
         document.querySelector(".page-loader").style.visibility = "visible";
     } else {
         document.querySelector(".page-loader").style.display = "none";
-        document.querySelector("body").style.visibility = "visible";
+        document.querySelector("webContent").style.visibility = "visible";
     }
 };
       // navbar

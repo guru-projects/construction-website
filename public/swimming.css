@@ -366,6 +366,38 @@ translate: 0;
 }
 /* completedProjects end */
 
+@media(width < 730px){
+  .contectUs {
+    margin-top: 200px;
+  }
+}
+@media(width > 1108px){
+  .contectUs {
+    margin-top: -300px;
+  }
+}
+.card.hidden{
+  opacity: 0;
+  transition: all 0.4s;
+}
+.card.show{
+  opacity: 1;
+  transition: all 0.4s;
+}
+
+.boldText{
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  color:#61677A;
+}
+.textShade{
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #353535;
+  font-family: 'poppins', sans-serif;
+}
+/* contect Us */
 .contectUs {
   /* margin-top: -200px; */
   margin-bottom: 100px;
@@ -457,34 +489,4 @@ translate: 0;
 .contectUs button:hover .button-text {
   color: #fff;
 }
-@media(width < 730px){
-  .contectUs {
-    margin-top: 200px;
-  }
-}
-@media(width > 1108px){
-  .contectUs {
-    margin-top: -300px;
-  }
-}
-.card.hidden{
-  opacity: 0;
-  transition: all 0.4s;
-}
-.card.show{
-  opacity: 1;
-  transition: all 0.4s;
-}
-
-.boldText{
-  font-size: clamp(1.5rem, 5vw, 2.5rem);
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400;
-  color:#61677A;
-}
-.textShade{
-  font-size: 1.5rem;
-  font-weight: 300;
-  color: #353535;
-  font-family: 'poppins', sans-serif;
-}
+/* contect us end */
