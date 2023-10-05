@@ -328,3 +328,18 @@ section .partners h1{
 .logos-slide img {
     margin: 0 40px;
 }
+
+.tailHeading{
+    font-family: 'Roboto', sans-serif;
+    /* font-weight: 400; */
+    color:#61677A;
+}
+@media(max-width:640px){
+    .tailHeading{
+        color:#fff;
+    }
+}
+.tailText{
+    font-family: 'Bai Jamjuree', sans-serif;
+    color: rgb(167,161,183);
+}

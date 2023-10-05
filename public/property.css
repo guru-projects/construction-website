@@ -280,6 +280,7 @@ section .partners h1{
 }
 
 .logos-slide img {
+    filter: hue-rotate(100deg);
     margin: 0 40px;
 }
 /* partners end */

@@ -174,7 +174,7 @@ font-weight: 100;
     transform: transition .5s;
 }
 .dropDown.open{
-    height: 330px;
+    height: 290px;
 }
 
 .dropDown li a{
