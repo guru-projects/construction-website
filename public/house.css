@@ -269,12 +269,11 @@ a {
   background-color: #efefef;
 }
 
-.awards p{
-  color: #30303099;
+.awards p{    
+  color: #61677A;
   text-align: center;
   margin: 20px 80px 20px 80px;
   font-family: "Poppins", sans-serif;
-  font-weight: lighter;
 }
 /* slideShow */
 .slideShow{
@@ -315,6 +314,7 @@ a {
 .row .right .content h1{
   text-transform: uppercase;
   padding: 20px 0;
+  color: #000000;
 }
 
 .row .right .content a{
@@ -322,9 +322,8 @@ a {
   top: 20px;
 }
 .row .right .content p{
-  color: #30303099;
+  color: #61677A;
   font-family: "Poppins", sans-serif;
-  font-weight: lighter;
   font-size: 16px;
   line-height: 26px;
   padding-bottom: 15px;
@@ -403,7 +402,7 @@ a {
   font-size: clamp(1.5rem, 5vw, 2.5rem);
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
-  color:#61677A;
+  color:#484c5c;
 }
 .aboutText{
   font-size: 1.5rem;
