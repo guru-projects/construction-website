@@ -65,6 +65,16 @@
     <section class="webContent">
 
     <script>
+      const dropDownAlign = document.querySelector(".dropDown");
+
+      // var pathname = window.location.pathname;
+      // console.log(pathname);
+      if(window.location.pathname=="/" || window.location.pathname=="/home"){
+        dropDownAlign.classList.add("dropDownSpace");
+      } else {
+        dropDownAlign.classList.remove("dropDownSpace");
+      }
+
       // pre-loader
      document.onreadystatechange = function() {
     if (document.readyState !== "complete") {

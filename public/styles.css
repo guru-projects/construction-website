@@ -188,10 +188,13 @@ font-weight: 100;
   color: #707070;
 }
 .dropDown li{
-    padding: 0.7rem;
+    padding: 0.9rem;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.dropDownSpace li{
+  padding: 0.7rem;
 }
 .dropDown .action-btn{
     width: 100%;
