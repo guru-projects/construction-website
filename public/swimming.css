@@ -113,12 +113,13 @@ main{
 }
 .choose .cards .card .content h1{
     margin-bottom: 20px;
+    color:#484c5c;
 }
 .choose .cards .card .content p{
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
-  font-size: 14px;
-  color: #30303099;
+  font-family: 'Roboto', sans-serif;
+    color: #61677A;
+  font-weight: 400;
+  font-size: 16px;
 }
 
 .finishedProjects{
@@ -276,6 +277,13 @@ input:checked + .slide-container .nav label { display: block; }
 }
 .textAndImg .text h1{
   margin-bottom: 20px;
+  color:#484c5c;
+}
+.textAndImg .text p{
+  font-family: 'Roboto', sans-serif;
+    color: #61677A;
+  font-weight: 400;
+  font-size: 16px;
 }
 /* slider end*/
 
@@ -350,12 +358,15 @@ opacity: 1;
 scale: 1;
 }
 .cardInside .card__title {
+  color: #e1e2e6;
 letter-spacing: 1px;
 text-transform: uppercase;
-text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
 }
 .cardInside .card__description {
-font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+    color: #e1e2e6;
+  font-weight: 400;
+  font-size: 16px;
 opacity: 0;
 translate: -25px;
 transition: opacity 0.25s, translate 0.25s;
@@ -376,14 +387,28 @@ translate: 0;
     margin-top: -300px;
   }
 }
+.cards .card.card2{
+  transition-delay: 0.3s;
+}
+.cards .card.card3{
+  transition-delay: 0.4s;
+}
 .card.hidden{
+  transform: translateY(100px);
+  transition: transform 0.6s linear;
+}
+.card.show{
+  transform: translateY(0);
+  transition: transform 0.6s linear;
+}
+/* .card.hidden{
   opacity: 0;
-  transition: all 0.4s;
+  transition: opacity 0.4s;
 }
 .card.show{
   opacity: 1;
-  transition: all 0.4s;
-}
+  transition: opacity 0.4s;
+} */
 
 .boldText{
   font-size: clamp(1.5rem, 5vw, 2.5rem);
@@ -456,7 +481,7 @@ translate: 0;
 .contectUs button.learn-more .circle .icon.arrow::before {
   position: absolute;
   content: "";
-  top: -0.25rem;
+  top: -0.29rem;
   right: 0.0625rem;
   width: 0.625rem;
   height: 0.625rem;

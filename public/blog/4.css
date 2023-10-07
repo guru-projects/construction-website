@@ -1,7 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&display=swap');
+.commentHead{
+    display: grid;
+    place-items: center;
+}
+.commentHead{
+    font-size: clamp(1rem, 5vw, 2rem);
+}
+.blogSection  p{
+    font-family: 'Roboto', sans-serif;
+    color: #61677A;
+    font-weight: 400;
+}
+.blogSection li{
+    font-family: 'Roboto', sans-serif;
+    color: #61677A;
+    font-weight: 400;
+}
+.italicText{
+    font-family: 'Libre Baskerville', serif;
+    font-weight: lighter;
+}
 .text{
-    font-family: 'Open Sans', sans-serif;
-  font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+  /* font-weight: bold; */
 }
 .blogAndAside{
     height:auto;
@@ -116,10 +137,10 @@
     flex-wrap: wrap;
     gap: 20px;
 }
-h2, h3{
+.blogSection h2, .blogSection h3{
     margin: 20px 0;
 }
-p{
+.blogSection p{
     margin-bottom: 20px;
 }
 /* comment */
@@ -170,4 +191,11 @@ p{
 .commentInputText p{
     margin-left: 10px;
 }
+.commentInputText h2{
+    margin-left: 10px;
+}
+.commentText h2{
+    margin-left: 10px;
+}
 /* comment end */
+

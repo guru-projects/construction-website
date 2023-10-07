@@ -49,17 +49,17 @@
             <div class="hamburger__hidden"></div>
           </div>
         </div>
-
       </div>
+
       <div class="dropDown">
         <li><a href="../home">Home</a></li>
         <li><a href="../house">House construction</a></li>
         <li><a href="../swimming">Swimming pool construction</a></li>
-        <!-- <li><a href="../interior">interior design</a></li> -->
         <li><a href="../property">Property maintenance</a></li>
         <li><a href="../blog">Blog</a></li>
         <li><a class="action-btn" href="../contact">Contact Us</a></li>
       </div>
+
     </header>
 
     <section class="webContent">
@@ -68,11 +68,11 @@
       // pre-loader
      document.onreadystatechange = function() {
     if (document.readyState !== "complete") {
-        document.querySelector("webContent").style.visibility = "none";
+        document.querySelector("body").style.visibility = "none";
         document.querySelector(".page-loader").style.visibility = "visible";
     } else {
         document.querySelector(".page-loader").style.display = "none";
-        document.querySelector("webContent").style.visibility = "visible";
+        document.querySelector("body").style.visibility = "visible";
     }
 };
       // navbar

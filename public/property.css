@@ -97,7 +97,7 @@ main h1{
   }
 
   .row .right .content h1{
-    /* padding: 20px 0; */
+    color:#484c5c;
     margin-top: 20px;
   }
   
@@ -107,8 +107,10 @@ main h1{
   }
 
   .row .right .content p{
-    
-    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    color: #61677A;
+  font-weight: 400;
+  font-size: 16px;
     line-height: 26px;
     padding-bottom: 15px;
   }
@@ -130,7 +132,7 @@ main h1{
 .serviceList{
     height: auto;   
 }
-.serviceList .firstHeading{
+.serviceList .firstHeading{ 
     display: grid;
     place-items: center;
     font-size: clamp(1rem, 5vw, 2rem);
@@ -153,6 +155,10 @@ main h1{
     margin: 40px 0;
 }
 .serviceList ol li{
+  font-family: 'Roboto', sans-serif;
+    color: #61677A;
+  font-weight: 400;
+  font-size: 16px;
     padding-right: 20%;
 }
 @media (max-width: 400px){
@@ -201,6 +207,7 @@ main h1{
   }
   .row .right .content h1{
     padding: 20px 0;
+    /* color:#484c5c; */
   }
   
   .row .right .content a{
@@ -424,4 +431,38 @@ section .partners h1{
   font-weight: 300;
   color: #353535;
   font-family: 'poppins', sans-serif;
+}
+.secondHeading.hidden{
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity, transform 0.4s linear;
+}
+.secondHeading.show{
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity, transform 0.4s linear;
+}
+.italic.hidden{
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity, transform 0.4s linear;
+  /* transition-delay: 0.3s; */
+}
+.italic.show{
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity, transform 0.4s linear;
+  transition-delay: 0.2s;
+}
+li.hidden{
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity, transform 0.4s linear;
+  /* transition-delay: 0.3s; */
+}
+li.show{
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity, transform 0.4s linear;
+  transition-delay: 0.3s;
 }

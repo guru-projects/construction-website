@@ -1,6 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+/* textAnimation */
+.textAnimation {
+	text-decoration: none;
+	color: #18272F;
+	/* font-weight: 700; */
+  position: relative;
+  z-index: 2;
+}
+
+.textAnimation::before {
+  content: '';
+  background-color: #A076F9;
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  border-radius: 10px;
+  height: 5px;
+  z-index: -1;
+  transition: all .3s ease-in-out;
+}
+
+.textAnimation:hover::before {
+  bottom: 0;
+  height: 100%;
+}
+/* textAnimation end */
 .contactUs{
-    margin-bottom: 150px;
+    margin-bottom: 50px;
     /* display: flex; */
     /* flex-wrap: wrap; */
     margin-top: 50px;
@@ -11,8 +38,11 @@
   font-weight: bold;
 }
 .contactUs .textPara{
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
+    color: #61677A;
+    font-weight: 400;
 }
+
 .contactUs .formContent{
     width: 100%;
 }
@@ -150,3 +180,61 @@
     padding-right: 0;
   }
 }
+.innerBox p{
+  font-family: 'Roboto', sans-serif;
+    color: #61677A;
+    font-weight: 400;
+}
+/* Partners */
+section .partners .partnersHeading{
+  display: grid;
+  place-items: center;
+}
+section .partners{
+    width: 100%;
+    height: 400px;
+    background-color:  #EDE4FF;
+} 
+section .partners .boldText{
+    font-size: 2rem;
+}
+section .partners h1{
+    color: #61677A;
+    text-align: center;
+}
+.logos .logos-slide img{
+    object-fit: contain;
+    width: 200px;
+    height: 200px;
+  }
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.logos {
+    overflow: hidden;
+    padding: 20px 0 60px  0;
+    white-space: nowrap;
+    position: relative;
+}
+
+.logos:hover .logos-slide {
+    animation-play-state: paused;
+}
+
+.logos-slide {
+    display: inline-block;
+    animation: 35s slide infinite linear;
+}
+
+.logos-slide img {
+  filter: opacity(0.5) drop-shadow(0 0 0 rgb(89, 0, 255));
+    margin: 0 40px;
+}
+/* partners end */

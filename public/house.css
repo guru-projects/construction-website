@@ -275,6 +275,10 @@ a {
   margin: 20px 80px 20px 80px;
   font-family: "Poppins", sans-serif;
 }
+.recentWorks{
+  background-color: #efefef;
+  padding: clamp(50px, 5vw, 100px) 0;
+}
 /* slideShow */
 .slideShow{
   width: 100%;

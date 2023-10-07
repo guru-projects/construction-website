@@ -142,11 +142,11 @@ section .number{
     font-size: 16px;
     border-radius: 0.5em;
     background-color: #21242b;
-    border-bottom: 10px solid #A076F9;
+    border-bottom: 10px solid #4F46E5;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 11.3115px 40px 0px;
   }
   i {
-    color: #A076F9;
+    color: #4F46E5;
     font-size: 2.5em;
     text-align: center;
   }
@@ -264,7 +264,7 @@ section .card .button{
     font-weight: bold;
     border-radius: 10px;
     color: #fff;
-    background-color: #A076F9;
+    background-color: #4F46E5;
     padding: 0.5rem 1rem;
     transition: scale 0.2s ease;
     transition: border-radius 0.2s;
