@@ -115,8 +115,16 @@
   max-width: 650px;
   margin: 100px 20px;
   padding: 50px 30px 50px 20px;
-  background-color: rgb(11, 141, 255);
+  background-color: #4F46E5;
   border-radius: 24px;
+}
+.aboutSection .innertext{
+  margin-top: -50px;
+}
+@media(max-width:740px){
+  .aboutSection .innertext{
+    margin-top: 0;
+  }
 }
 .aboutSection .card h1{
     padding: 10px 0;

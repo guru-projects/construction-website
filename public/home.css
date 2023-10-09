@@ -62,7 +62,8 @@ main .welcomeNote{
     display: grid;
     place-items: center;
     height: 100vh;
-    animation: welcome 2s linear;
+    animation: welcome 3s linear;
+    animation-direction: right;
 }
 @keyframes welcome {
     from{
