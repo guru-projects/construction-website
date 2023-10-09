@@ -17,7 +17,10 @@
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
-
+::selection{
+  color:coral;
+  background-color: #171718;
+}
 body{
     height: 100vh;
     background-color: #EDE4FF;
